@@ -10,8 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button buttonChangeGreeting;
-    Button buttonGoToWelcome;
+    Button buttonGoToMainActivity;
     TextView textViewGreeting;
 
     @Override
@@ -19,26 +18,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buttonChangeGreeting = findViewById(R.id.buttonChangeGreeting);
-        buttonGoToWelcome = findViewById(R.id.buttonGoToWelcome);
-        textViewGreeting = findViewById(R.id.textHello);
-
-        View.OnClickListener buttonChangeGreetingClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                textViewGreeting.setText("Hello Hackers!");
-            }
-        };
-        buttonChangeGreeting.setOnClickListener(buttonChangeGreetingClickListener);
-
+        buttonGoToMainActivity = findViewById(R.id.buttonGoToMainActivity);
         View.OnClickListener buttonGoToWelcomeClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, WelcomeActivity.class);
-                i.putExtra("message", "Welcome to HackRice 12 First Timers Track!");
+                Intent i = new Intent(MainActivity.this, EditDataActivity.class);
+                i.putExtra("message", "Rate your day!");
                 startActivity(i);
             }
         };
-        buttonGoToWelcome.setOnClickListener(buttonGoToWelcomeClickListener);
+        buttonGoToMainActivity.setOnClickListener(buttonGoToWelcomeClickListener);
+
     }
 }
