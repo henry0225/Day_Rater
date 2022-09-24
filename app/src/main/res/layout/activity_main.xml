@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/dataAverage"
+        android:id="@+id/yesterdayValue"
         android:layout_width="79dp"
         android:layout_height="70dp"
         android:layout_marginStart="10dp"
@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="@+id/imageView2" />
 
     <TextView
-        android:id="@+id/WeeklyAverage"
+        android:id="@+id/weeklyAverage"
         android:layout_width="79dp"
         android:layout_height="70dp"
         android:layout_marginStart="10dp"
@@ -29,7 +29,7 @@
         app:layout_constraintStart_toStartOf="@+id/imageView2" />
 
     <TextView
-        android:id="@+id/MonthlyAverage"
+        android:id="@+id/monthlyAverage"
         android:layout_width="79dp"
         android:layout_height="70dp"
         android:layout_marginStart="10dp"
@@ -40,7 +40,7 @@
         app:layout_constraintStart_toStartOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/dataText4"
+        android:id="@+id/yearlyAverage"
         android:layout_width="79dp"
         android:layout_height="70dp"
         android:layout_marginStart="10dp"
@@ -51,7 +51,7 @@
         app:layout_constraintStart_toStartOf="@+id/imageView5" />
 
     <TextView
-        android:id="@+id/dataText5"
+        android:id="@+id/totalDataPoints"
         android:layout_width="79dp"
         android:layout_height="70dp"
         android:layout_marginStart="8dp"
@@ -62,7 +62,7 @@
         app:layout_constraintStart_toStartOf="@+id/imageView3" />
 
     <TextView
-        android:id="@+id/dataText6"
+        android:id="@+id/streak"
         android:layout_width="79dp"
         android:layout_height="70dp"
         android:layout_marginStart="124dp"
