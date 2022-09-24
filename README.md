@@ -1,3 +1,4 @@
+
 # HR12-First-Timers-Track
 # HackRice 12 First Timers Track - Life Hacks Android App
 
@@ -10,3 +11,8 @@ There are a lot of tasks that could be eased with the help of technology. Create
 NOTE: The entire team must be first time hackathon participants in order to compete in this track. Also, you can either build the Android app from scratch or start from our provided code in this GitHub repository which can be opened in Android Studio.
 
 UPDATED README: HENRY
+=======
+# Day Rater
+# HackRice22
+# Henry, Richard, Robert, JJ
+
