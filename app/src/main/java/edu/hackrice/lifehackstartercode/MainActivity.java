@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener buttonChangeGreetingClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textViewGreeting.setText("Hello Hackers!");
+                textViewGreeting.setText("Home Page");
             }
         };
         buttonChangeGreeting.setOnClickListener(buttonChangeGreetingClickListener);
@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener buttonGoToWelcomeClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, WelcomeActivity.class);
-                i.putExtra("message", "Welcome to HackRice 12 First Timers Track!");
+                Intent i = new Intent(MainActivity.this, EditDataActivity.class);
+                i.putExtra("message", "Rate your day!");
                 startActivity(i);
             }
         };
