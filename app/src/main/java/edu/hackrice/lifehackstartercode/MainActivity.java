@@ -9,16 +9,16 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+/*
     Button buttonChangeGreeting;
     Button buttonGoToWelcome;
     TextView textViewGreeting;
-
+*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+/*
         buttonChangeGreeting = findViewById(R.id.buttonChangeGreeting);
         buttonGoToWelcome = findViewById(R.id.buttonGoToWelcome);
         textViewGreeting = findViewById(R.id.textHello);
@@ -40,5 +40,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         buttonGoToWelcome.setOnClickListener(buttonGoToWelcomeClickListener);
+
+ */
     }
 }
