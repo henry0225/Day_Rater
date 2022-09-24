@@ -9,28 +9,16 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-/*
-    Button buttonChangeGreeting;
-    Button buttonGoToWelcome;
+
+    Button buttonGoToMainActivity;
     TextView textViewGreeting;
-*/
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-/*
-        buttonChangeGreeting = findViewById(R.id.buttonChangeGreeting);
-        buttonGoToWelcome = findViewById(R.id.buttonGoToWelcome);
-        textViewGreeting = findViewById(R.id.textHello);
 
-        View.OnClickListener buttonChangeGreetingClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                textViewGreeting.setText("Home Page");
-            }
-        };
-        buttonChangeGreeting.setOnClickListener(buttonChangeGreetingClickListener);
-
+        buttonGoToMainActivity = findViewById(R.id.buttonGoToMainActivity);
         View.OnClickListener buttonGoToWelcomeClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,8 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         };
-        buttonGoToWelcome.setOnClickListener(buttonGoToWelcomeClickListener);
+        buttonGoToMainActivity.setOnClickListener(buttonGoToWelcomeClickListener);
 
- */
     }
 }
