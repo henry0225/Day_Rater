@@ -10,7 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LifeHackStarterCode">
         <activity
-            android:name=".WelcomeActivity"
+            android:name=".ListDataActivity"
+            android:parentActivityName=".EditDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditDataActivity"
             android:parentActivityName=".MainActivity"
             android:exported="false" />
         <activity
