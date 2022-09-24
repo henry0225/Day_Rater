@@ -12,7 +12,6 @@ public class MainActivity extends AppCompatActivity {
 
     Button buttonGoToMain;
     TextView textViewDayRater;
-    TextView textViewWelcomeBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
         buttonGoToMain = findViewById(R.id.buttonGoToMainActivity);
         textViewDayRater = findViewById(R.id.textDayRater);
-        textViewWelcomeBack = findViewById(R.id.textWelcomeBack);
 
         View.OnClickListener buttonGoToMainClickListener = new View.OnClickListener() {
             @Override
