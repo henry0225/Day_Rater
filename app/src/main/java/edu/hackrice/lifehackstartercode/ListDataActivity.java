@@ -12,6 +12,7 @@ import android.database.Cursor;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ListDataActivity extends AppCompatActivity {
 
@@ -40,8 +41,9 @@ public class ListDataActivity extends AppCompatActivity {
         while(data.moveToNext()){
             //get the value from the database in column 1
             //then add it to the ArrayList
-            listData.add(data.getString(1));
+            listData.add(data.getString(1)+" " +String.valueOf(data.getFloat(2))+" "+data.getString(3));
         }
+        Collections.reverse(listData);
         //create the list adapter and set the adapter
         ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listData);
         mListView.setAdapter(adapter);

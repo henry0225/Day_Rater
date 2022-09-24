@@ -4,17 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Button;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+import java.time.LocalDate;
 public class EditDataActivity extends AppCompatActivity {
 
     TextView textViewWelcome;
     DatabaseHelper mDatabaseHelper;
     Button btnAdd, btnViewData;
     EditText editText;
+    SeekBar ratingBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +29,7 @@ public class EditDataActivity extends AppCompatActivity {
         String message = i.getStringExtra("message");
         textViewWelcome.setText(message);
         editText = findViewById(R.id.editText);
+        ratingBar = findViewById(R.id.ratingBar);
         btnAdd = findViewById(R.id.btnAdd);
         btnViewData = findViewById(R.id.btnView);
         mDatabaseHelper = new DatabaseHelper(this);
@@ -33,10 +37,16 @@ public class EditDataActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String newEntry = editText.getText().toString();
+                String entry = editText.getText().toString();
+                double rating = ratingBar.getProgress();
+                String date = null;
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                    date = String.valueOf(LocalDate.now());
+                }
                 if (editText.length() != 0) {
-                    AddData(newEntry);
+                    AddData(date, rating, entry);
                     editText.setText("");
+                    ratingBar.setProgress(0);
                 } else {
                     toastMessage("You must put something in the text field!");
                 }
@@ -54,8 +64,8 @@ public class EditDataActivity extends AppCompatActivity {
 
     }
 
-    public void AddData(String newEntry) {
-        boolean insertData = mDatabaseHelper.addData(newEntry);
+    public void AddData(String col2, double col3, String col4) {
+        boolean insertData = mDatabaseHelper.addData(col2, col3, col4);
 
         if (insertData) {
             toastMessage("Data Successfully Inserted!");
