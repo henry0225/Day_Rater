@@ -84,9 +84,8 @@
         android:layout_marginTop="68dp"
         android:layout_marginEnd="110dp"
         android:fontFamily="@font/proximanova_regular"
-        android:text="Day Rater"
-        android:textFontWeight="@integer/material_motion_duration_long_1"
         android:gravity="center"
+        android:textFontWeight="@integer/material_motion_duration_long_1"
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -175,6 +174,16 @@
         app:layout_constraintBottom_toTopOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
         app:layout_constraintStart_toStartOf="@+id/imageView4" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-320dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textDayRater"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/day_rater_logo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
