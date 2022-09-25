@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             totalEntries++;
 
         }
-        weekAverageText.setText(String.valueOf(Math.round(weekTotal/7)));
+        weekAverageText.setText(String.valueOf(Math.round(weekTotal/totalEntries)));
         totalEntriesText.setText(String.valueOf(totalEntries));
         streakText.setText(String.valueOf(streak));
 
@@ -109,6 +109,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 dbHelper.deleteAll();
                 toastMessage("History successfully deleted!");
+                finish();
+                startActivity(getIntent());
             }
         });
     }
