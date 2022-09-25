@@ -8,8 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -36,13 +39,15 @@ public class MainActivity extends AppCompatActivity {
         Calendar yesterday = Calendar.getInstance();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Date today = new Date();
-        double total = 0;
+
+        double weekTotal = 0;
         int totalEntries = 0;
         Cursor data = dbHelper.getData();
         int streak = 0;
         boolean continueStreak = true;
         String yestStr;
         String todayStr = formatter.format(today);
+
         while(data.moveToNext()){
             if(continueStreak){
                 try {
@@ -60,10 +65,19 @@ public class MainActivity extends AppCompatActivity {
                     streak++;
                 }
             }
+            long daysBetween = 8;
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                LocalDate to = LocalDate.parse(todayStr);
+                LocalDate from = LocalDate.parse(data.getString(1));
+                daysBetween = ChronoUnit.DAYS.between(from, to);
+            }
+            if(daysBetween<=7){
+                weekTotal += data.getFloat(2);
+            }
             totalEntries++;
-            total += data.getFloat(2);
+
         }
-        weekAverageText.setText(String.valueOf(total));
+        weekAverageText.setText(String.valueOf(Math.round(weekTotal/7)));
         totalEntriesText.setText(String.valueOf(totalEntries));
         streakText.setText(String.valueOf(streak));
 
