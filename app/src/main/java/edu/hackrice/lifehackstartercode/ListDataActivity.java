@@ -55,7 +55,7 @@ public class ListDataActivity extends AppCompatActivity {
             resultsMap.put("Second Line", data.getString(3));
             listItems.add(resultsMap);
         }
-        Collections.reverse(listData);
+        Collections.reverse(listItems);
         //create the list adapter and set the adapter
         SimpleAdapter adapter = new SimpleAdapter(this, listItems, R.layout.mytextview,new String[]{"First Line", "Second Line"},
                 new int[]{R.id.text1, R.id.text2});

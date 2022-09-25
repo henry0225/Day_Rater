@@ -17,11 +17,13 @@ import java.util.Calendar;
 import java.util.Date;
 
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     Button buttonGoToMainActivity;
     Button btnView;
+    Button buttonDelete;
     TextView textViewGreeting;
     TextView streakText;
     TextView weekAverageText;
@@ -100,5 +102,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        buttonDelete = findViewById(R.id.buttonDelete);
+        buttonDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dbHelper.deleteAll();
+                toastMessage("History successfully deleted!");
+            }
+        });
+    }
+    private void toastMessage(String message){
+        Toast.makeText(this,message, Toast.LENGTH_SHORT).show();
     }
 }

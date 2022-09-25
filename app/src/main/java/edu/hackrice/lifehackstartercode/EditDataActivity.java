@@ -15,10 +15,9 @@ public class EditDataActivity extends AppCompatActivity {
 
     TextView textViewWelcome;
     DatabaseHelper mDatabaseHelper;
-    Button btnAdd, btnViewData;
+    Button btnAdd;
     EditText editText;
     SeekBar ratingBar;
-    TextView ratingDisplay;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,20 +31,7 @@ public class EditDataActivity extends AppCompatActivity {
         editText = findViewById(R.id.editText);
         ratingBar = findViewById(R.id.ratingBar);
         btnAdd = findViewById(R.id.btnAdd);
-        ratingDisplay = findViewById(R.id.ratingDisplay);
-        btnViewData = findViewById(R.id.btnView);
         mDatabaseHelper = new DatabaseHelper(this);
-
-        ratingBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                ratingDisplay.setText(String.valueOf(ratingBar.getProgress()));
-            }
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {}
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {}
-        });
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,8 +57,6 @@ public class EditDataActivity extends AppCompatActivity {
 
 
     }
-
-
 
     public void AddData(String col2, double col3, String col4) {
         boolean insertData = mDatabaseHelper.addData(col2, col3, col4);
