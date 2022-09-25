@@ -7,48 +7,22 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/textDayRater"
-        app:srcCompat="@drawable/transparent_circle" />
-
-    <TextView
-        android:id="@+id/totalEntriesText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Total Entries"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.53" />
-
-    <TextView
-        android:id="@+id/weekAverageText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:gravity="center"
-        android:text="Week Average"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.53" />
-
-    <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="35dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDayRater"
+        app:srcCompat="@drawable/transparent_circle" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/textDayRater"
         app:srcCompat="@drawable/transparent_circle" />
 
@@ -56,89 +30,85 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="15dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/textDayRater"
         app:srcCompat="@drawable/transparent_circle" />
-
-    <TextView
-        android:id="@+id/streakText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Streak"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.53" />
 
     <TextView
         android:id="@+id/textDayRater"
         android:layout_width="220dp"
         android:layout_height="64dp"
         android:layout_marginStart="110dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="83dp"
         android:layout_marginEnd="110dp"
-        android:fontFamily="@font/proximanova_regular"
         android:text="Day Rater"
-        android:textFontWeight="@integer/material_motion_duration_long_1"
         android:textSize="50sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonGoToMainActivity"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="115dp"
-        android:layout_marginEnd="115dp"
-        android:layout_marginBottom="236dp"
-        android:fontFamily="@font/dmsansbold"
+        android:layout_width="153dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="44dp"
         android:text="Add"
-        android:textSize="27sp"
+        android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.935" />
 
     <Button
         android:id="@+id/btnView"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="115dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="115dp"
-        android:layout_marginBottom="136dp"
+        android:layout_width="180dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="44dp"
         android:text="History"
-        android:fontFamily="@font/dmsansbold"
-        android:textSize="26sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.415"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonGoToMainActivity" />
-
-    <Button
-        android:id="@+id/buttonDelete"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="115dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="115dp"
-        android:layout_marginBottom="32dp"
-        android:fontFamily="@font/dmsansbold"
-        android:text="Delete"
         android:textSize="27sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnView" />
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/streakText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Streak"
+        android:gravity="center"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/weekAverageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Week Average"
+        android:gravity="center"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/totalEntriesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Entries"
+        android:gravity="center"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
