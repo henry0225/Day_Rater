@@ -18,12 +18,14 @@ public class EditDataActivity extends AppCompatActivity {
     Button btnAdd;
     EditText editText;
     SeekBar ratingBar;
+    TextView ratingDisplay;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_data);
 
         textViewWelcome = findViewById(R.id.textViewWelcome);
+        ratingDisplay = findViewById(R.id.ratingDisplay);
 
         Intent i = getIntent();
         String message = i.getStringExtra("message");
@@ -54,7 +56,16 @@ public class EditDataActivity extends AppCompatActivity {
             }
         });
 
-
+        ratingBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                ratingDisplay.setText(String.valueOf(ratingBar.getProgress()));
+            }
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {}
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
 
     }
 
