@@ -50,17 +50,12 @@ public class EditDataActivity extends AppCompatActivity {
                 } else {
                     toastMessage("You must put something in the text field!");
                 }
-
-            }
-        });
-
-        btnViewData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
                 Intent intent = new Intent(EditDataActivity.this, ListDataActivity.class);
                 startActivity(intent);
             }
         });
+
+
 
     }
 

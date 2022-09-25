@@ -135,34 +135,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(query);
     }
 
-    /**
-     * Delete from database
-     * @param id
-     * @param rating
-     */
-    public void deleteRating(int id, double rating){
-        SQLiteDatabase db = this.getWritableDatabase();
-        String query = "DELETE FROM " + TABLE_NAME + " WHERE "
-                + COL1 + " = '" + id + "'" +
-                " AND " + COL3 + " = '" + String.valueOf(rating) + "'";
-        Log.d(TAG, "deleteName: query: " + query);
-        Log.d(TAG, "deleteName: Deleting " + String.valueOf(rating) + " from database.");
-        db.execSQL(query);
-    }
 
-    /**
-     * Delete from database
-     * @param id
-     * @param entry
-     */
-    public void deleteEntry(int id, String entry){
-        SQLiteDatabase db = this.getWritableDatabase();
-        String query = "DELETE FROM " + TABLE_NAME + " WHERE "
-                + COL1 + " = '" + id + "'" +
-                " AND " + COL4 + " = '" + entry + "'";
-        Log.d(TAG, "deleteName: query: " + query);
-        Log.d(TAG, "deleteName: Deleting " + entry + " from database.");
-        db.execSQL(query);
-    }
 
 }

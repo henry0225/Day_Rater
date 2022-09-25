@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     Button buttonGoToMainActivity;
+    Button btnView;
     TextView textViewGreeting;
 
     @Override
@@ -29,5 +30,13 @@ public class MainActivity extends AppCompatActivity {
         };
         buttonGoToMainActivity.setOnClickListener(buttonGoToWelcomeClickListener);
 
+        btnView = findViewById(R.id.btnView);
+        btnView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListDataActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
