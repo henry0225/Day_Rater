@@ -53,11 +53,26 @@
         android:id="@+id/buttonGoToMainActivity"
         android:layout_width="153dp"
         android:layout_height="76dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="44dp"
         android:text="Add"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.935" />
+
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="180dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="44dp"
+        android:text="History"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
